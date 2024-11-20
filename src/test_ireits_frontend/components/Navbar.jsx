@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleMenuClose = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <div>
       {/* Navigation Bar */}
@@ -50,9 +54,12 @@ export default function Navbar() {
             <button className="text-sm font-medium text-gray-600 hover:text-gray-800">
               Open Escrow
             </button>
-            <button className="rounded-full bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-500">
+            <Link
+              to="/signin" // Sign In Route
+              className="rounded-full bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-500"
+            >
               SIGN IN
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -60,30 +67,45 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-white shadow-md">
             <div className="flex flex-col items-start gap-4 p-4">
+              {/* Close Button (X) */}
+              <button
+                onClick={handleMenuClose}
+                className="text-gray-600 hover:text-gray-800 text-xl self-end"
+              >
+                &times;
+              </button>
+
               <Link
                 to="/marketplace"
                 className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+                onClick={handleMenuClose} // Close menu on link click
               >
                 Marketplace
               </Link>
               <Link
                 to="/buy-sell"
                 className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+                onClick={handleMenuClose} // Close menu on link click
               >
                 Buy/Sell
               </Link>
               <Link
                 to="/agents"
                 className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+                onClick={handleMenuClose} // Close menu on link click
               >
                 For Agents
               </Link>
               <button className="text-sm font-medium text-gray-600 hover:text-gray-800">
                 Open Escrow
               </button>
-              <button className="rounded-full bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-500">
+              <Link
+                to="/signin" // Sign In Route for Mobile Menu
+                className="rounded-full bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-500"
+                onClick={handleMenuClose} // Close menu on link click
+              >
                 SIGN IN
-              </button>
+              </Link>
             </div>
           </div>
         )}

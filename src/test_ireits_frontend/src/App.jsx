@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Marketplace from "./pages/Marketplace";
 import BuySell from "./pages/BuySell";
 import AgentsListing from "./pages/AgentsListing";
+import Signin from "./pages/Signin";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
+        <Route path="/signin" element={<Signin />} />
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/agents" element={<AgentsListing />} />
         <Route path="/buy-sell" element={<BuySell />} />
