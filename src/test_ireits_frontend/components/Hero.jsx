@@ -1,5 +1,7 @@
 import { FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import CryptoEscrow from "../src/pages/Crypto-escrow";
+import TitleServices from "./TitleServices";
 
 export default function Hero() {
   return (
@@ -43,6 +45,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <CryptoEscrow />
+      <TitleServices />
     </main>
   );
 }

@@ -19,7 +19,7 @@ export default function BuySell() {
   }, [searchType])
 
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12 pt-16">
       <div className="container mx-auto px-4">
         <h2 className="mb-8 text-center text-3xl font-bold">Find Your Perfect Property</h2>
         <div className="mx-auto max-w-3xl rounded-lg bg-white p-6 shadow-md">

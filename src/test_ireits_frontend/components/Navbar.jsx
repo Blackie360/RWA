@@ -1,5 +1,5 @@
-import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,9 +10,9 @@ export default function Navbar() {
       <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           {/* Logo */}
-          <a href="/" className="flex items-center text-2xl font-bold text-orange-600">
+          <Link to="/" className="flex items-center text-2xl font-bold text-orange-600">
             <img src="/logo.jpeg" alt="logo" className="h-12 w-12 mr-2" /> ProVest
-          </a>
+          </Link>
 
           {/* Hamburger Menu - Mobile */}
           <button
@@ -25,21 +25,24 @@ export default function Navbar() {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-1 text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
-              Buy
-              <ChevronDown className="h-4 w-4" />
-            </div>
-            <div className="flex items-center gap-1 text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
-              Sell
-              <ChevronDown className="h-4 w-4" />
-            </div>
-            <div className="flex items-center gap-1 text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
+            <Link
+              to="/marketplace"
+              className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+            >
+              Marketplace
+            </Link>
+            <Link
+              to="/buy-sell"
+              className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+            >
+              Buy/Sell
+            </Link>
+            <Link
+              to="/agents"
+              className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+            >
               For Agents
-              <ChevronDown className="h-4 w-4" />
-            </div>
-            <div className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
-              Title & Escrow
-            </div>
+            </Link>
           </div>
 
           {/* Action Buttons */}
@@ -57,21 +60,24 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-white shadow-md">
             <div className="flex flex-col items-start gap-4 p-4">
-              <div className="flex items-center gap-1 text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
-                Buy
-                <ChevronDown className="h-4 w-4" />
-              </div>
-              <div className="flex items-center gap-1 text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
-                Sell
-                <ChevronDown className="h-4 w-4" />
-              </div>
-              <div className="flex items-center gap-1 text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
+              <Link
+                to="/marketplace"
+                className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+              >
+                Marketplace
+              </Link>
+              <Link
+                to="/buy-sell"
+                className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+              >
+                Buy/Sell
+              </Link>
+              <Link
+                to="/agents"
+                className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600"
+              >
                 For Agents
-                <ChevronDown className="h-4 w-4" />
-              </div>
-              <div className="text-sm font-medium text-gray-700 cursor-pointer hover:text-orange-600">
-                Title & Escrow
-              </div>
+              </Link>
               <button className="text-sm font-medium text-gray-600 hover:text-gray-800">
                 Open Escrow
               </button>

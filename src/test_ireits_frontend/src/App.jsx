@@ -1,24 +1,22 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import CryptoEscrow from "../components/Crypto-escrow";
-import Marketplace from "../components/Marketplace";
-import TitleServices from "../components/TitleServices";
-import BuySell from "../components/BuySell";
+import Marketplace from "./pages/Marketplace";
+import BuySell from "./pages/BuySell";
+import AgentsListing from "./pages/AgentsListing";
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/marketplace" element={<Marketplace />} />
-        <Route path="/crypto-escrow" element={<CryptoEscrow />} />
-        <Route path="/title-services" element={<TitleServices />} />
+        <Route path="/agents" element={<AgentsListing />} />
         <Route path="/buy-sell" element={<BuySell />} />
       </Routes>
-    </>
+    </Router>
   );
 };
 
