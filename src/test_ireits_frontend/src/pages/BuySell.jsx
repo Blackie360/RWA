@@ -26,7 +26,7 @@ export default function BuySell() {
           <div className="mb-4 flex">
             <button
               className={`flex-1 rounded-l-lg px-4 py-2 ${
-                searchType === 'buy' ? 'bg-primary text-white' : 'bg-gray-200'
+                searchType === 'buy' ? 'bg-primary text-black' : 'bg-gray-200'
               }`}
               onClick={() => setSearchType('buy')}
             >
@@ -34,7 +34,7 @@ export default function BuySell() {
             </button>
             <button
               className={`flex-1 rounded-r-lg px-4 py-2 ${
-                searchType === 'sell' ? 'bg-primary text-white' : 'bg-gray-200'
+                searchType === 'sell' ? 'bg-primary text-black' : 'bg-gray-200'
               }`}
               onClick={() => setSearchType('sell')}
             >
