@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           {/* Logo */}
           <a href="/" className="flex items-center text-2xl font-bold text-orange-600">
-            <img src="/logo.jpeg" alt="logo" className="h-8 w-8 mr-2" /> ProVest
+            <img src="/logo.jpeg" alt="logo" className="h-12 w-12 mr-2" /> ProVest
           </a>
 
           {/* Hamburger Menu - Mobile */}
