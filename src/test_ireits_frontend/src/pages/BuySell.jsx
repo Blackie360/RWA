@@ -8,14 +8,14 @@ export default function BuySell() {
   const popularSearches = [
     { icon: Home, text: 'Houses for sale' },
     { icon: Building, text: 'Apartments for rent' },
-    { icon: MapPin, text: 'Properties in New York' },
+    { icon: MapPin, text: 'Properties in Nairobi' },
     { icon: Home, text: 'Condos for sale' },
     { icon: Building, text: 'Office spaces' },
     { icon: MapPin, text: 'Beachfront properties' },
   ]
 
   useEffect(() => {
-    setSearchValue(searchType === 'buy' ? 'New York' : '123 Main St, Anytown, USA')
+    setSearchValue(searchType === 'buy' ? 'Nairobi' : 'Enter your property address')
   }, [searchType])
 
   return (
