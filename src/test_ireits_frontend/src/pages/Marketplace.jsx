@@ -6,7 +6,7 @@ export default function Marketplace() {
     {
       id: 1,
       title: 'Modern Apartment',
-      price: '$250,000',
+      price: '250,000 PT',
       location: 'Downtown Nakuru',
       image: '/nakuru.jpeg?height=200&width=300',
       beds: 2,
@@ -18,7 +18,7 @@ export default function Marketplace() {
     {
       id: 2,
       title: 'Suburban House',
-      price: '$450,000',
+      price: '450,000 PT',
       location: 'Kilimani, Nairobi',
       image: '/nairobi.jpg?height=200&width=300',
       beds: 4,
@@ -30,13 +30,13 @@ export default function Marketplace() {
     {
       id: 3,
       title: 'Villa',
-      price: '$800,000',
+      price: '800,000 PT',
       location: 'Nyali, Mombasa',
       image: '/mombasa.jpg?height=200&width=300',
       beds: 5,
       baths: 2,
-      area: " Greenwood drive, Nyali Area",
-      type: 'villa',
+      area: "Greenwood Drive, Nyali Area",
+      type: 'Villa',
       status: 'For Lease',
     },
   ];
